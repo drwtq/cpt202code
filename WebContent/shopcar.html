@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="js/iconfont.js"></script>
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentcolor;
+				overflow: hidden;
+			}
+			
+			.mui-active .mui-icon,
+			.mui-active .mui-tab-label {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav"style="background-color: pink;">
+	    <span class="mui-pull-left" >Shopcar</span>
+	    
+	
+	
+	<div class="contaniner fixed-contb">
+		<section class="shopcar">
+			<div class="shopcar-checkbox">
+				<label for="shopcar" onselectstart="return false"></label>
+				<input type="checkbox" id="shopcar"/>
+			</div>
+			<figure><img src="images/list1.png"></figure>
+			<dl>
+				<dt>Product Name</dt>
+				<dd>Product Information</dd>
+				<dd>More Information</dd>
+				<div class="add">
+					<div class="mui-numbox">
+                     <!-- "-"鎸夐挳锛岀偣鍑诲彲鍑忓皬褰撳墠鏁板� -->
+                   <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                <input class="mui-numbox-input" type="number" />
+                 <!-- "+"鎸夐挳锛岀偣鍑诲彲澧炲ぇ褰撳墠鏁板� -->
+                 <input type="text" value="鏁伴噺" />
+                 <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                    </div>
+					
+					
+				</div>
+				<h3>Price</h3>
+				<small><span class="mui-icon mui-icon-trash"></span></small>
+			</dl>
+		</section>
+		
+		<div style="margin-bottom: 16%;"></div>
+		
+	</div>
+	<div class="shop-go">
+			<b>Total : </b>
+			<span><a href="buy.html">Settle Account</a></span>
+		</div>
+	
+	
+	
+	<nav class="mui-bar mui-bar-tab" style="background: pink;">
+			<a class="mui-tab-item mui-active" href=" " onclick="window.location.href='index.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">home</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">chat</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">shopcar</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='personal-center.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">personal-center</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var pages = ["index.html", "chat.html", "shopcar.html", "personal-center.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i = 0; i < pages.length; i++) {
+					var item = plus.webview.create(pages[i], pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap", "a", function() {
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+		
+	</body>
+</html>

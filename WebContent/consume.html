@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="js/iconfont.js"></script>
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentcolor;
+				overflow: hidden;
+			}
+			
+			.mui-active .mui-icon,
+			.mui-active .mui-tab-label {
+				color: black;
+			}
+		</style>
+    <script type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div class="warp clearfloat">
+			<header class="top-header">
+					<a class="icona" href="javascript:history.go(-1)">
+							<img src="img/left.png"/>
+						</a>
+					<h3>Consume history</h3>
+					<a class="iconb" href="shopcar.html">
+					</a>
+			</header>
+			<div class="main clearfloat" id="main">
+				<div class="balance clearfloat">
+					<div class="top clearfloat box-s">
+						<p class="dqian">balance</p>
+						<p class="price">0.00<span>元</span></p>
+						<a href="#" class="ba-btn fl">
+							charge
+						</a>
+					</div>
+					<div class="bottom clearfloat mt10 box-s">
+						<p class="tit box-s">
+							recent 30 days income and expenses
+						</p>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">third payment</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage fr">-26.30</span>
+								</li>
+							</ul>
+						</div>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">charge</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage jiage1 fr">+26.30</span>
+								</li>
+							</ul>
+						</div>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">third payment</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage fr">-26.30</span>
+								</li>
+							</ul>
+						</div>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">charge</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage jiage1 fr">+26.30</span>
+								</li>
+							</ul>
+						</div>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">third payment</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage fr">-26.30</span>
+								</li>
+							</ul>
+						</div>
+						<div class="list fl box-s clearfloat">
+							<ul>
+								<li class="fl">
+									<span class="dsan fl">charge</span>
+									<span class="time fr">2016-1-02</span>
+								</li>
+								<li class="fl mt5">
+									<span class="yue fl">balance：0.00</span>
+									<span class="jiage jiage1 fr">+26.30</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="mui-bar mui-bar-tab" style="background: pink;">
+			<a class="mui-tab-item mui-active" href=" " onclick="window.location.href='index.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">home</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">chat</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">shopcar</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='mycenter.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">mycenter</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var pages = ["index.html", "chat.html", "shopcar.html", "mycenter.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i = 0; i < pages.length; i++) {
+					var item = plus.webview.create(pages[i], pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap", "a", function() {
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+			
+	</body>
+</html>

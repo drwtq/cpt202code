@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<script src="js/mui.min.js"></script>
+		
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/main.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8"></script>
+		<title>个人中心</title><br />
+		<script src="js/iconfont.js"></script>
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentcolor;
+				overflow: hidden;
+			}
+			
+			.mui-active .mui-icon,
+			.mui-active .mui-tab-label {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="p-top  clearfloat">
+			<a href="information.html">
+				<div class="tu">
+					<img src="img/touxiang.png" />
+				</div>
+				<p class="name">admin</p>
+			</a>
+		</div>
+		
+		<div class="contaniner fixed-contb">
+			<section class="self">
+				<dl>
+					<dt>
+					<a href="order.html">
+						<img src="img/self-icon.png"/>
+						<b>All Order</b>
+						<span><img src="img/right.png"/></span>
+					</a>
+					</dt>
+				</dl>
+				
+					
+					
+							<li>
+								<a href="order2.html">
+									<img src="img/order-icon01.png" />
+									<p>Need Sending</p>
+								</a>
+							</li>
+							<li>
+								<a href="npay.html">
+									<img src="img/order-icon03.png" />
+									<p>Need Paying</p>
+								</a>
+							</li>
+							<li>
+								<a href="receive.html">
+									<img src="img/order-icon02.png" />
+									<p>Need Receive</p>
+								</a>
+							</li>
+							<li>
+								<a href="nevaluate.html">
+									<img src="img/order-icon04.png" />
+									<p>Need Evaluate</p>
+								</a>
+							</li>
+					
+					
+              
+				<dl>
+					<dt>
+						
+						<a href="information.html">
+							<img src="img/self-icon01.png" />
+							<b>Personal Information</b>
+							<span><img src="img/right.png"/></span>
+						</a>
+					   
+					</dt>
+				</dl>
+				
+				<dl>
+					<dt>
+						
+						<a href="history.html">
+							<img src="img/self-icon03.png" />
+							<b>History</b>
+							<span><img src="img/right.png"/></span>
+						</a>
+					   
+					</dt>
+				</dl>
+				
+				<dl>
+					<dt>
+						<a href="mycollect.html">
+							<img src="img/self-icon02.png" />
+							<b>My Collection</b>
+							<span><img src="img/right.png"/></span>
+							</a>
+					</dt>
+				</dl>
+				<dl>
+					<dt>
+						
+						<a href="consume.html">
+							<img src="img/self-icon012.png" />
+							<b>Payment Records</b>
+							<span><img src="img/right.png"/></span>
+						</a>
+					</dt>
+				</dl>	
+				<dl>
+					<dt>
+						<a href="address.html">
+							<img src="img/self-icon04.png" />
+							<b>Adress Management</b>
+							<span><img src="img/right.png"/></span>
+						</a>
+					</dt>
+				</dl>
+			
+				<dl>
+					<dt>
+					
+						<a href="myshop.html">
+							<img src="img/self-icon05.png" />
+							<b>My Shop</b>
+							<span><img src="img/right.png"/></span>
+						</a>
+					</dt>
+				</dl>
+
+				<dl>	
+					<dt>
+						<a href="login.jsp">
+							<img src="img/self-icon013.png" />
+							<b>Login</b>
+							<span><img src="img/right.png"/></span>
+
+						</a>
+					</dt>
+				</dl>
+				<a href="login.jsp"><input type="button" value="Log Out" /></a>
+
+			</section>
+
+		</div>
+
+		<nav class="mui-bar mui-bar-tab" style="background: pink;">
+			<a class="mui-tab-item mui-active" href=" " onclick="window.location.href='index.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">home</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">chat</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">shopcar</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='personal-center.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">personal-center</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var pages = ["index.html", "chat.html", "shopcar.html", "personal-center.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i = 0; i < pages.length; i++) {
+					var item = plus.webview.create(pages[i], pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap", "a", function() {
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

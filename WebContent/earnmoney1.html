@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="js/iconfont.js"></script>
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentcolor;
+				overflow: hidden;
+			}
+			
+			.mui-active .mui-icon,
+			.mui-active .mui-tab-label {
+				color: black;
+			}
+		</style>
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="fx-center">
+		<div class="warp clearfloat">
+			<!--header star-->
+			<div class="header2 clearfloat box-s" id="header">
+				<div class="left1 clearfloat fl">
+					<a href="javascript:history.go(-1)" class="back">
+						<img src="img/left.png"/>
+					</a>
+				</div>
+				<div class="middle clearfloat fl">
+					Resell Center
+				</div>
+			</div>
+			<!--header end-->
+			<!--p-center star-->
+			<div id="main" class="clearfloat">
+				<div class="p-top p-top1 clearfloat">
+					<a href="personal.html">
+						<div class="tu">
+							<img src="img/touxiang.png"/>
+						</div>
+						<p class="name">admin</p>
+					</a>
+					<div class="p-bottom clearfloat">
+						<ul>
+							<a href="#">
+								<li class="box-s">
+									<span class="opa6"></span>
+									<p class="bt">status</p>
+									<p class="price">reseller</p>
+								</li>
+							</a>
+							<a href="#">
+								<li class="box-s">
+									<span class="opa6"></span>
+									<p class="bt">total sold</p>
+									<p class="price">￥138</p>
+								</li>
+							</a>
+							<a href="#">
+								<li class="box-s">
+									<span class="opa6"></span>
+									<p class="bt">total money</p>
+									<p class="price">￥2.76</p>
+								</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="p-list p-listtwo clearfloat">
+					<ul>
+						<a href="#">
+							<li class="box-s tit">
+								<p class="fl icon299">sell center</p>
+							</li>
+						</a>
+						<a href="shop.html">
+							<li class="box-s">
+								<p class="fl icon222">my shop</p>
+								<span class="back fr"></span>
+							</li>
+						</a>
+						<a href="shopcar.html">
+							<li class="box-s">
+								<p class="fl icon223">change shop name</p>
+								<span class="back fr"></span>
+							</li>
+						</a>
+						<a href="huiyuan.html">
+							<li class="box-s">
+								<p class="fl icon222">my member</p>
+								<span class="back fr"></span>
+							</li>
+						</a>
+						
+						<a href="#">
+							<li class="box-s">
+								<p class="fl icon222">selling commodity</p>
+								<span class="back fr"></span>
+							</li>
+						</a>
+						<a href="#">
+							<li class="box-s">
+								<p class="fl icon223">sold commodity</p>
+								<span class="back fr"></span>
+							</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		<nav class="mui-bar mui-bar-tab" style="background: pink;">
+			<a class="mui-tab-item mui-active" href=" " onclick="window.location.href='index.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">home</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">chat</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">shopcar</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='personal-center.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">personal-center</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var pages = ["index.html", "chat.html", "shopcar.html", "personal-center.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i = 0; i < pages.length; i++) {
+					var item = plus.webview.create(pages[i], pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap", "a", function() {
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/iconfont.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentcolor;
+				overflow: hidden;
+			}
+			
+			.mui-active .mui-icon,
+			.mui-active .mui-tab-label {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background: pink;">
+			<div class="mui-input-row mui-pull-left mui-search">
+
+				<input type="search" class="mui-input-clear" placeholder="" style="background: white;" onfocus="this.style.color='gray'">
+			</div>
+
+			<button type="button" class="mui-btn mui-btn-grey mui-btn-block">search</button>
+		</header>
+		<nav class="mui-bar mui-bar-tab" style="background: pink;">
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='index.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">home</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">chat</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">shopcar</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='personal-center.html'">
+				<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+				<span class="mui-tab-label">personal-center</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				var pages = ["index.html", "chat.html", "shopcar.html", "personal-center.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i = 0; i < pages.length; i++) {
+					var item = plus.webview.create(pages[i], pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap", "a", function() {
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/lb4.png">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/lb5.png">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/lb.png">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/lb2.png">
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/lb4.png">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/lb5.png">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				mui.init()
+
+				var sliderObj = mui("#slider");
+				sliderObj.slider({
+					interval: 1000
+				});
+			</script>
+
+			<ul id="grid" class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="list.html">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-nanzhuang"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">male</div>
+					</a>
+
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="#page1">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-tianmaochaoshi"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">shopping</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="#page1">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-nvzhuang"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">female</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="#page1">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-muying"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">infant&mom</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="#page1">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-huazhuangpin"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">cosmetrics</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					<a href="#page1">
+						<span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-jiaju"></use>
+                       </svg>
+                   </span>
+						<div class="mui-media-body">furniture</div>
+					</a>
+				</li>
+			</ul>
+			<div class="home-newgoods ui-box">
+
+				<img class="home-imgtit" src="img/hometit1.jpg" alt="" />
+				<div class="picture" style="float: left;">
+					<a href="detail.html"><img src="images/list1.png" style="width: 48%;" alt="" /></a>
+                    <a href="detail.html"><img src="images/list2.png" style="width: 48%;" alt="" /></a>
+					<a href="detail.html"><img src="images/list3.png" style="width: 48%;" alt="" /></a>
+					<a href="detail.html"><img src="images/list4.png" style="width: 48%;" alt="" /></a>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	</body>
+
+</html>

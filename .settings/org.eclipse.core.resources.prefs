@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebContent/LeaveMessage.jsp=UTF-8
+encoding//WebContent/MessageDetail.jsp=UTF-8
+encoding//WebContent/login.jsp=UTF-8
+encoding//WebContent/register.jsp=UTF-8
+encoding//WebContent/shopcar.html=UTF-8
+encoding//src/JDBC/JDBC.java=GBK
+encoding//src/Sevlet=GBK
+encoding//src/Sevlet/LoginServlet.java=GBK
+encoding//src/Sevlet/RegistServlet.java=GBK
+encoding//src/useBean/DetailDB.java=GBK
+encoding//src/useBean/MessageDB.java=GBK
+encoding//src/useBean/UserDB.java=GBK
+encoding/<project>=GBK

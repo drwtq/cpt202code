@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<header class="top-header fixed-header">
+		<a class="icona" href="javascript:history.go(-1)">
+				<img src="img/left.png"/>
+			</a>
+		<h3>address</h3>
+			
+			<a class="text-top" >
+			</a>
+	</header>
+	
+	<div class="contaniner fixed-conta">
+		<form action="" method="post" class="change-address" id="save">
+			<ul>
+				<li>
+					<label class="addd">considnee：</label>
+					<input type="text" value="" required="required"/>
+				</li>
+				<li>
+					<label class="addd">phone number：</label>
+					<input type="tel" value="" required="required"/>
+				</li>
+				<li>
+					<label class="addd">location：</label>
+					<select>
+						<option>xxx</option>
+						<option>xxx</option>
+						<option>xx</option>
+					</select>
+					<select>
+						<option>xxx</option>
+						<option>xx</option>
+						<option>xx</option>
+					</select>
+					<select>
+						<option>xx</option>
+						<option>xx</option>
+						<option>xx</option>
+					</select>
+				</li>
+				<li>
+					<label class="addd">detail location：</label>
+					<textarea required="required"></textarea>
+				</li>
+			</ul>
+			
+			<ul>
+				<li class="checkboxa">
+					<input type="checkbox" id="check"/>
+					<label class="check" for="check" onselectstart="return false"  >Set to the default address</label>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<h3>delete this address</h3>
+				</li>
+			</ul>
+			<input type="submit" value="save" />
+		</form>
+	</div>
+	
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".checkboxa label").on('touchstart',function(){
+			if($(this).hasClass('checkd')){
+				$(".checkboxa label").removeClass("checkd");
+			}else{
+				$(".checkboxa label").addClass("checkd");
+			}
+		})
+	</script>
+		
+		
+	</body>
+</html>

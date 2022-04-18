@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ral"
+  id="myeclipse.1466485810843"
+  context-root="/ral"
+  j2ee-spec="5.0"
+  archive="ral.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

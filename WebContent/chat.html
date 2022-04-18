@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		 <link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+      <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript" src="js/iconfont.js">
+      	
+      </script>
+    <script type="text/javascript">
+    	$(window).load(function(){
+    		$(".loading").addClass("loader-chanage")
+    		$(".loading").fadeOut(300)
+    	})
+    	
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+	<div class="loader">
+        <div class="loader-inner pacman">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+	</div>
+</div>
+<!--loading页结束-->
+	</head>
+
+	<body>
+		<header class="top-header fixed-header" style="font-size: 10px;">
+		<a class="icona" href="index.html">
+				<img src="images/left.png"/>
+			</a>
+		<h3>chat</h3>
+			
+			<a class="iconb" href="shopcar.html">
+				<img src="images/shopbar.png"/>
+			</a>
+		</header>
+		<nav class="mui-bar mui-bar-tab" style="background: pink;">
+		    <a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='index.html'">
+		       <span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-shouye"></use>
+                       </svg>
+                   </span>
+                   <span class="mui-tab-label">home</span>
+		    </a>
+		    <a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='chat.html'" > 
+		        <span class="mui-icon mui-icon-weixin"></span>
+		        <span class="mui-tab-label">chat</span>
+		    </a>
+		    <a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='shopcar.html'">
+		       <span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gouwuchekong"></use>
+                       </svg>
+                   </span>
+                   <span class="mui-tab-label">shopcar</span>
+		    </a>
+		    <a class="mui-tab-item mui-active" href="javascript:void(0);" onclick="window.location.href='personal-center.html'">
+		        <span class="mui-icon">
+                       <svg class="icon" aria-hidden="true">
+                          <use xlink:href="#icon-gerenzhongxin"></use>
+                       </svg>
+                   </span>
+                   <span class="mui-tab-label">personal-center</span>		   
+		    </a>
+		</nav>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				var pages = ["index.html", "chat.html","shopcar.html", "personal-center.html"];
+				var ws = plus.webview.currentWebview();
+				for(var i =0;i<pages.length;i++){
+					var item = plus.webview.create(pages[i],pages[i]);
+					ws.append(item);
+				}
+				plus.webview.show(pages[0]);
+				mui(".mui-bar-tab").on("tap","a",function(){
+					var herf = this.getAttribute("href");
+					plus.webview.show(href);
+				});
+			});
+		</script>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

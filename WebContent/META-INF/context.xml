@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/MessageBoard">
+<!-- context里的path要填映像值 resource里的name要填connection的lookup的值
+		url后面要指定时区 -->
+	<Resource name="jdbc/sunbin" auth="Container"
+		driverClassName="com.mysql.jdbc.Driver"
+		url = "jdbc:mysql://localhost:3306/messageboard?serverTimezone=UTC"
+		username="root" password="123456"
+		maxActive="100" maxidle="30" maxWait="10000"
+		logAbandoned="true" removeAbandoned="true"
+		removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+</Context> 
